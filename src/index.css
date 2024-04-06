@@ -1,13 +1,124 @@
 body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background:url("./assets/background.png");
+  font-weight: bold;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1); 
+  background-color: transparent;
 }
+.header {
+  position: fixed; /* Set the position to fixed */
+  top: 0; /* Position at the top */
+  left: 0; /* Position at the left */
+  width: 100%; /* Occupy full width */
+  background-color: maroon; /* Set the background color */
+  color: white; /* Set the text color */
+  font-size: 60px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center; /* Center align the text */
+  margin: 0;
+}
+
+#demo2::-webkit-scrollbar {
+  background-color: orange;
+  border-radius: 1px 2px;
+}
+#demo2::-webkit-scrollbar-button {
+  background-color: yellow;
+  border-radius: 50%;
+}
+.flex-item {
+  flex: 0 0 auto;
+  margin: 5px;
+}
+#demo {
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: Arial, sans-serif;
+}
+button {
+  width: 140px;
+}
+#startbutton {
+  background: linear-gradient(45deg, blue,navy);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+#stopbutton{
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+#splitbutton {
+  background: linear-gradient(45deg, darkgreen,green);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+#lapbutton{
+  background: linear-gradient(45deg, purple,indigo);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+p {
+  font-size: large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#demo2 {
+  flex-basis: 100%;
+  text-align: center;
+  text-overflow: ellipsis; 
+  overflow:auto;
+  overflow-wrap: normal;
+  list-style-type: none;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 140px;
+  font-weight: bold;
+}
+@media screen and (max-width: 700px){
+  .flex-item {
+    flex-basis: 100%;
+  }
+}
+
